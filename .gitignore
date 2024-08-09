@@ -1,6 +1,6 @@
-./.idea
+.idea
 
-./build
-./data
+build
+data
 
-./go.sum
+go.sum
