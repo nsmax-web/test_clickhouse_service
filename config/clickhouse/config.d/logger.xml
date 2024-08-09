@@ -1,0 +1,9 @@
+<clickhouse>
+    <logger replace="true">
+        <level from_env="LOG_LEVEL">debug</level>
+        <log>/var/log/clickhouse-server/clickhouse-server.log</log>
+        <errorlog>/var/log/clickhouse-server/clickhouse-server.err.log</errorlog>
+        <size>10M</size>
+        <count>5</count>
+    </logger>
+</clickhouse>
