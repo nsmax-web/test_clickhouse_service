@@ -1,0 +1,16 @@
+---
+services:
+  - name: ch1
+    image: clickhouse/clickhouse-server:24.4.3.25-alpine
+    ports:
+      - 9000:9000
+    environment:
+      - TZ=Europe/Moscow
+      - SHARD=1
+      - REPLICA=1
+    volumes:
+      - ./data/clickhouse/data:/var/lib/clickhouse
+      - ./data/clickhouse/logs:/var/log/clickhouse-server
+      - ./config/clickhouse/config.d:/etc/clickhouse-server/config.d
+      - ./config/clickhouse/users.d:/etc/clickhouse-server/users.d
+      - ./config/clickhouse/initdb.d:/docker-entrypoint-initdb.d

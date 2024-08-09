@@ -1,4 +1,4 @@
-module awesomeProject
+module pet/test/clickhouse_service
 
 go 1.21.1
 
